@@ -3,6 +3,10 @@
 A browser instrument for exploring Dingr. All synthesis, playback, and exports
 happen locally in the browser. No backend or account is required.
 
+The playground uses Vite 8 and requires Node.js 20.19+ or 22.12+ (Node 21 is
+unsupported). The repository's `.tool-versions` selects Node 22.20.0 for asdf.
+This development requirement is separate from the library's Node.js 20+ support.
+
 From the Dingr repository:
 
 ```sh
@@ -54,3 +58,22 @@ full-page desktop and mobile screenshots in the ignored `test-results/` director
 
 `npm run build` produces a static `dist/` directory. To preview that build, run
 `npm run preview` from this directory. No changes to the library build are needed.
+
+## Troubleshooting after dependency upgrades
+
+If Vite fails to start with `Cannot find native binding`, check `node --version`
+first. Switch to a supported Node version, then run `npm ci --prefix playground`
+from the repository root to reinstall the platform-specific optional dependencies
+from the lockfile. Do not omit optional dependencies.
+
+With asdf, run these from the repository root:
+
+```sh
+asdf install
+asdf exec node --version
+asdf exec npm ci --prefix playground
+asdf exec npm test --prefix playground
+```
+
+If Playwright then reports a missing browser executable, install the browser for
+the installed Playwright version with `(cd playground && npx playwright install chromium)`.
