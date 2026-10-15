@@ -323,6 +323,12 @@ test("fits a mobile viewport and renders desktop and mobile snapshots", async ({
 }, testInfo) => {
   await page.goto("/");
   await ready(page);
+  const brand = page.getByRole("link", { name: "Dingr playground home" });
+  await expect(brand).toHaveText("dingr");
+  await expect(brand.locator("img")).toBeVisible();
+  await expect.poll(() => brand.locator("img").evaluate(
+    (image: HTMLImageElement) => image.complete && image.naturalWidth > 0,
+  )).toBe(true);
   await page.screenshot({
     path: testInfo.outputPath("desktop.png"),
     fullPage: true,

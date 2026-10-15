@@ -1,3 +1,5 @@
+<img src="assets/brand/dingr-logo-concept.png" alt="dingr logo" width="128" height="128" />
+
 # dingr — sound effects for JavaScript and TypeScript
 
 Deterministic sound effects, built from notes and code. `dingr` is a small

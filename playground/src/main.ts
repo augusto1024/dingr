@@ -13,6 +13,7 @@ import {
 import "./style.css";
 import { mountDemos } from "./demos.ts";
 
+const logoUrl = new URL("./assets/dingr-logo.png", import.meta.url).href;
 const $ = <T extends HTMLElement = HTMLElement>(selector: string) =>
   document.querySelector<T>(selector)!;
 const label = (name: string) =>
@@ -74,7 +75,7 @@ const renderAsync = (recipe: Recipe) =>
   });
 
 $("#app").innerHTML = `
-  <header class="masthead"><a class="wordmark" href="./" aria-label="Dingr playground home">dingr<span>·</span></a><span class="masthead-note">a little laboratory for sound</span><span class="edition">PLAYGROUND / 01</span></header>
+  <header class="masthead"><a class="wordmark" href="./" aria-label="Dingr playground home"><img class="brand-logo" src="${logoUrl}" alt="" width="48" height="48" />dingr</a></header>
   <main>
     <div class="intro"><div><p class="eyebrow">SOUND, FROM SCRATCH</p><h1>Make a little noise<span>.</span></h1></div><p>A JavaScript &amp; TypeScript sound library.<br>Play, shape, and export your own effects.</p></div>
     <section class="instrument" aria-label="Sound playground">
