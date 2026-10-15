@@ -28,7 +28,11 @@ Vite app; synthesis, playback, and exports happen in the browser.
 
 ## Setup and commands
 
-Use Node.js 20 or newer (the Pages workflow uses Node 22) and npm. The root and
+Use Node.js 22.20.0 for development, selected by `.tool-versions` for asdf (the
+Pages workflow uses Node 22). Vitest 5 at the root requires Node 22.12+ on the
+Node 22 release line; Vite 8 in the playground also supports this version.
+The library itself still supports Node 20+. If the shell selects an older Node,
+use `asdf exec npm` for installation, tests, and builds. Use npm. The root and
 `playground/` have separate packages and lockfiles; this is not an npm workspace.
 Run these commands from the repository root unless stated otherwise.
 

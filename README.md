@@ -174,12 +174,22 @@ common cues such as `tap`, `confirm`, `error`, `reveal`, `countdown`, and `victo
 
 ## Development
 
+Use Node.js 22.20.0 for development (`asdf install` reads `.tool-versions`). The
+root's Vitest 5 test runner requires Node 22.12+ on the Node 22 release line;
+the playground's Vite 8 tooling also supports this version. The library itself
+continues to support Node.js 20 and newer.
+
 ```sh
 npm ci
 npm test
 npm run typecheck
 npm run build
 ```
+
+If your shell still selects an older Node version, run `asdf exec npm ci` and
+`asdf exec npm test` from the repository root. Reinstall dependencies under the
+selected Node version after upgrading build tools; this also restores optional
+native dependencies that may have been skipped by an older Node installation.
 
 ## Sound playground
 
