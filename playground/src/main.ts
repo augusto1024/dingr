@@ -76,7 +76,7 @@ const renderAsync = (recipe: Recipe) =>
 $("#app").innerHTML = `
   <header class="masthead"><a class="wordmark" href="./" aria-label="Dingr playground home">dingr<span>·</span></a><span class="masthead-note">a little laboratory for sound</span><span class="edition">PLAYGROUND / 01</span></header>
   <main>
-    <div class="intro"><div><p class="eyebrow">SOUND, FROM SCRATCH</p><h1>Make a little noise<span>.</span></h1></div><p>Find a tone. Follow a feeling.<br>Make it yours.</p></div>
+    <div class="intro"><div><p class="eyebrow">SOUND, FROM SCRATCH</p><h1>Make a little noise<span>.</span></h1></div><p>A JavaScript &amp; TypeScript sound library.<br>Play, shape, and export your own effects.</p></div>
     <section class="instrument" aria-label="Sound playground">
       <div class="workspace">
         <div class="toolbar"><div class="mode-switch" role="group" aria-label="Composition mode"><button data-mode="sound" aria-pressed="true">Single sound</button><button data-mode="sequence" aria-pressed="false">Sequence</button><button data-mode="recipe" aria-pressed="false">Recipe</button></div><button id="reset" class="quiet">Reset ↺</button></div>

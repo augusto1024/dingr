@@ -6,9 +6,18 @@
     <meta name="theme-color" content="#191d24" />
     <meta
       name="description"
-      content="A little laboratory for sound. Play, shape, and export sounds with dingr."
+      content="Create sound effects with dingr, a JavaScript and TypeScript audio library. Try the playground, compose notes, and export WAV files. No samples or dependencies."
     />
-    <title>dingr — sound playground</title>
+    <title>dingr — Sound Effects Library for JavaScript and TypeScript</title>
+    <link rel="canonical" href="https://augusto1024.github.io/dingr/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="dingr" />
+    <meta property="og:title" content="dingr — Sound Effects Library for JavaScript and TypeScript" />
+    <meta property="og:description" content="Synthesize sound effects from notes and code. Explore the playground, shape your sound, and export WAV files. Free to use, no attribution required." />
+    <meta property="og:url" content="https://augusto1024.github.io/dingr/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="dingr — Sound Effects Library for JavaScript and TypeScript" />
+    <meta name="twitter:description" content="Synthesize sound effects from notes and code. Try the playground and export WAV files. No samples or runtime dependencies." />
     <link
       rel="icon"
       type="image/svg+xml"
@@ -17,6 +26,32 @@
   </head>
   <body>
     <div id="app"></div>
+    <section class="library-guide" aria-labelledby="library-title">
+      <div>
+        <p class="eyebrow">BRING THE SOUND TO YOUR APP</p>
+        <h2 id="library-title">Sound effects, made with code.</h2>
+        <p>dingr is a JavaScript and TypeScript audio library for UI sounds,
+          notifications, and game effects. Synthesize tones, compose musical
+          sequences, and export mono WAV files in Node.js or the browser.</p>
+        <p>No recorded samples or runtime dependencies. Save editable JSON recipes
+          to reproduce your sounds. Free for personal and commercial use under
+          the Unlicense, with no attribution required.</p>
+        <nav class="library-links" aria-label="Library resources">
+          <a href="https://github.com/augusto1024/dingr#quick-start">Read the docs ↗</a>
+          <a href="https://github.com/augusto1024/dingr">View on GitHub ↗</a>
+          <a href="https://github.com/augusto1024/dingr/blob/main/LICENSE">License ↗</a>
+        </nav>
+      </div>
+      <div class="library-example">
+        <p class="eyebrow">A SOUND IN THREE LINES</p>
+        <pre tabindex="0" aria-label="JavaScript example"><code>import { createSound, render, encodeWav } from "dingr";
+
+const recipe = createSound("kalimba", { note: "C4" });
+const sound = render(recipe);
+const wav = encodeWav(sound);</code></pre>
+        <p>Start with a note. Get a WAV as a Uint8Array.</p>
+      </div>
+    </section>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

@@ -1,10 +1,14 @@
-# dingr
+# dingr — sound effects for JavaScript and TypeScript
 
 Deterministic sound effects, built from notes and code. `dingr` is a small
 TypeScript library for creating sound recipes, rendering them to PCM, and
 exporting WAV files. It includes 18 synthesized sound families, a note-sequence
 builder, and editable JSON recipes. It has no runtime dependencies and uses no
 recorded samples.
+
+[Try the sound playground](https://augusto1024.github.io/dingr/).
+Create UI feedback, notification sounds, and game effects from code, in Node.js
+or the browser.
 
 The sounds are generated with simple digital signal processing: oscillators
 provide pitched components, while partials, short noise bursts, pitch movement,
@@ -186,3 +190,9 @@ npm run dev --prefix playground
 ```
 
 See [the playground README](playground/README.md) for controls and browser tests.
+
+## License
+
+Released under the [Unlicense](LICENSE). You may use, copy, modify, distribute,
+and sell this software for any purpose, including commercial projects, without
+attribution. The software is provided without warranty.

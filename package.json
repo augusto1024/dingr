@@ -1,8 +1,29 @@
 {
   "name": "dingr",
   "version": "0.5.0",
-  "description": "Deterministic sound recipes, musical sequences, and portable WAV rendering.",
-  "private": true,
+  "description": "A JavaScript and TypeScript sound effects library: synthesize deterministic audio, compose note sequences, and export WAV files without samples or runtime dependencies.",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://augusto1024.github.io/dingr/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augusto1024/dingr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/augusto1024/dingr/issues"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "audio",
+    "sound-effects",
+    "synthesizer",
+    "procedural-audio",
+    "wav",
+    "pcm"
+  ],
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -14,7 +35,8 @@
   "files": [
     "dist",
     "bin",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -26,7 +48,7 @@
     "typescript": "^5.7.0",
     "vitest": "^1.6.1"
   },
-  "license": "UNLICENSED",
+  "license": "Unlicense",
   "engines": {
     "node": ">=20"
   },
