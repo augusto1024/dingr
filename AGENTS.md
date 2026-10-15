@@ -10,6 +10,9 @@ effects from versioned JSON recipes and exports mono PCM WAV files. It has no
 runtime dependencies or recorded samples. The separate playground is a static
 Vite app; synthesis, playback, and exports happen in the browser.
 
+The npm package name and public import specifier are `@augusto1024/dingr`.
+The brand, repository name, and CLI command remain `dingr`.
+
 ## Repository map
 
 | Path | Purpose |

@@ -20,7 +20,7 @@ the intended sound, not a recording or physical model of the named object.
 ## Install
 
 ```sh
-npm install dingr
+npm install @augusto1024/dingr
 ```
 
 Requires Node.js 20 or newer. The package provides ESM and TypeScript declarations.
@@ -30,7 +30,7 @@ so use a Web Worker for composition that should not block the main thread.
 ## Quick start
 
 ```ts
-import { createSequence, createSound, encodeWav, render } from "dingr";
+import { createSequence, createSound, encodeWav, render } from "@augusto1024/dingr";
 
 const melody = createSequence("C4, E4, G4, -", {
   family: "kalimba",
@@ -118,7 +118,7 @@ sequence with `createSequence`. Edit the `voices` array to layer sounds, then us
 scale voice durations, and set a different seed:
 
 ```ts
-import { shapeRecipe } from "dingr";
+import { shapeRecipe } from "@augusto1024/dingr";
 
 const variation = shapeRecipe(melody, {
   brightnessOffset: 0.1,
@@ -148,7 +148,7 @@ Back and Forward use matching descending and ascending notes. Confirmation is a
 brief acknowledgment, while Success adds a short resolving phrase.
 
 ```ts
-import { appPresets, render } from "dingr";
+import { appPresets, render } from "@augusto1024/dingr";
 
 const notification = render(appPresets.notification);
 ```

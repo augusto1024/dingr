@@ -1,5 +1,5 @@
 {
-  "name": "dingr",
+  "name": "@augusto1024/dingr",
   "version": "1.0.0",
   "description": "A JavaScript and TypeScript sound effects library: synthesize deterministic audio, compose note sequences, and export WAV files without samples or runtime dependencies.",
   "private": false,
