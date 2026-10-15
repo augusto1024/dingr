@@ -1,6 +1,10 @@
-<img src="assets/brand/dingr-logo-concept.png" alt="dingr logo" width="128" height="128" />
+<p align="center">
+  <img src="assets/brand/dingr-logo-concept.png" alt="dingr logo" width="128" height="128" />
+</p>
 
 # dingr — sound effects for JavaScript and TypeScript
+
+[![npm version](https://img.shields.io/npm/v/%40augusto1024%2Fdingr?logo=npm&color=ff684a&labelColor=231d2b)](https://www.npmjs.com/package/@augusto1024/dingr)
 
 Deterministic sound effects, built from notes and code. `dingr` is a small
 TypeScript library for creating sound recipes, rendering them to PCM, and
